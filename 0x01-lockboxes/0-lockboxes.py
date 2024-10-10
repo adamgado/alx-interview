@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """box numbered sequentially and each box may contain keys to other boxes"""
 
 
