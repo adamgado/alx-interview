@@ -4,13 +4,17 @@
 
 def canUnlockAll(boxes):
     """determine if all the boxes can be opened"""
-    keyslist = [0]
-    for a in keyslist:
-        for b in boxes[a]:
-            if b not in keyslist and b < len(boxes):
-                keyslist.append(b)
-
-    if len(keyslist) == len(boxes):
-        return True
-    else:
+    if (type(boxes)) is not list:
         return False
+    elif (len(boxes)) == 0:
+        return False
+
+    for k in range(1, len(boxes) - 1):
+        boxes_checked = False
+        for idx in range(len(boxes)):
+            boxes_checked = k in boxes[idx] and k != idx
+            if boxes_checked:
+                break
+        if boxes_checked is False:
+            return boxes_checked
+    return True
