@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""box is numbered sequentially and each box may contain keys to the other boxes"""
+"""box numbered sequentially and each box may contain keys to other boxes"""
 
 
 def canUnlockAll(boxes):
